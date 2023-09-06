@@ -1,0 +1,6 @@
+.cache
+dist
+public
+templates
+node_modules
+bun.lockb

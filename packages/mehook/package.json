@@ -1,0 +1,65 @@
+{
+  "name": "mehook",
+  "private": false,
+  "version": "0.0.0",
+  "description": "Simplify, streamline, and have fun. Let the magic happen with mehook",
+  "homepage": "https://mehook.meluiz.com",
+  "type": "module",
+  "license": "MIT",
+  "author": {
+    "name": "meluiz",
+    "email": "me@meluiz.com",
+    "url": "https://meluiz.com"
+  },
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "require": "./dist/index.cjs",
+    "import": "./dist/index.mjs"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=16.15.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meluiz/mehook.git"
+  },
+  "bugs": {
+    "url": "https://github.com/meluiz/mehook/issues"
+  },
+  "scripts": {
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "bun eslint . --ext {ts,tsx,md,mdx,json} --fix",
+    "format": "prettier --write \"**/*.{ts,tsx,md,mdx,json}\"",
+    "typecheck": "bunx tsc --noEmit",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:coverage": "vitest run --coverage"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "@vitejs/plugin-react": "^4.0.3",
+    "eslint": "^8.45.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.3",
+    "typescript": "^5.0.2",
+    "vite": "^4.4.5",
+    "vite-plugin-dts": "^3.5.3"
+  }
+}

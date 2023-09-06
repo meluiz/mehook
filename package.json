@@ -1,0 +1,57 @@
+{
+  "name": "workspace",
+  "private": true,
+  "type": "module",
+  "module": "true",
+  "description": "Simplify, streamline, and have fun. Let the magic happen with mehook",
+  "homepage": "https://mehook.meluiz.com",
+  "license": "MIT",
+  "author": {
+    "name": "meluiz",
+    "email": "me@meluiz.com",
+    "url": "https://meluiz.com"
+  },
+  "keywords": [
+    "react",
+    "hooks",
+    "mehook",
+    "typescript"
+  ],
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "engines": {
+    "node": ">=16.15.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/meluiz/mehook"
+  },
+  "bugs": {
+    "url": "https://github.com/meluiz/mehook/issues"
+  },
+  "scripts": {
+    "lint": "eslint . --ext {ts,tsx,md,mdx,json} --fix",
+    "format": "prettier --write \"**/*.{ts,tsx,md,mdx,json}\"",
+    "typecheck": "bunx tsc --noEmit",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:coverage": "vitest run --coverage",
+    "changeset": "bunx changeset",
+    "changeset:version": "npx changeset version",
+    "changeset:publish": "npx changeset publish"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.26.2",
+    "@vitest/coverage-v8": "^0.34.3",
+    "@vitest/ui": "^0.34.3",
+    "bun-types": "latest",
+    "eslint-plugin-tree-shaking": "^1.10.1",
+    "prettier": "^3.0.3",
+    "vitest": "^0.34.3"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
